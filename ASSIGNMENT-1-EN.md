@@ -12,7 +12,7 @@ the Entity-Relationship model and the Relational model.
 
 ---
 
-## <u>**A – Requirements for the 1<sup>st</sup> assignment**</u>
+## <u>**A – 1<sup>st</sup> assignment requirements**</u>
 
 You are asked to create a database for managing movie data. This
 data includes film details (e.g., name, duration, budget),

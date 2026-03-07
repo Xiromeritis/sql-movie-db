@@ -12,7 +12,7 @@ to the database.
 
 ---
 
-## <u>**A – Requirements for the 2<sup>nd</sup> assignment**</u>
+## <u>**A – 2<sup>nd</sup> assignment requirements**</u>
 
 You are asked to create the database you designed in Assignment 1, which concerns the management of
 movie data. This data includes information about the
