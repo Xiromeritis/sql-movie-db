@@ -86,16 +86,16 @@ Open your SQL Client and connect to your local or remote database environment.
 
    - Use the "**Run as Script**" / "**Execute All**" feature of your specific SQL extension.
 
-- Create the Schema:
+1) Create the Schema:
   Run create.sql to generate the tables. (See execution tip above)
 
-- Populate the Database:
+2) Populate the Database:
   Run insert.sql to insert the sample movies, actors, roles, and companies.
 
-- Execute Queries:
+2) Execute Queries:
   Run select.sql to extract statistics and answer the predefined analytical questions.
 
-- Clean up (*Optional*):
+3) Clean up (*Optional*):
   Run drop.sql to cleanly remove all tables from your environment.
 
 ---
