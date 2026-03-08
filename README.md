@@ -118,4 +118,4 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 > **1<sup>st</sup> Assignment: <sup>100</sup> / <sub>100</sub>**
 > 
-> **2<sup>nd</sup> Assignment: <sup>92</sup> / <sub>10</sub>**
+> **2<sup>nd</sup> Assignment: <sup>92</sup> / <sub>100</sub>**
