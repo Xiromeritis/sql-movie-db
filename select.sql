@@ -1,5 +1,5 @@
 -- 1) What are the titles and durations of all action films that are longer than 120 minutes?
-SELECT m.Movie_Title AS "Action Movies", TO_CHAR(m.Movie_Duration) || ' minutes' AS "Duration"
+SELECT m.Movie_Title AS "Action Movies", TO_CHAR(m.Movie_Duration) || 'minutes' AS "Duration"
 FROM Movie m
 JOIN Genres g ON m.Movie_ID = g.Movie_ID 
 WHERE g.Genre = 'Action' AND m.Movie_Duration > 120;
