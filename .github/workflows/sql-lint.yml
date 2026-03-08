@@ -1,0 +1,28 @@
+name: SQL Lint
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install SQLFluff
+        run: pip install sqlfluff
+
+      - name: Check SQL files
+        # We use continue-on-error so the action doesn't fail 
+        # if it finds simple formatting issues in your archived code.
+        run: sqlfluff lint . --dialect oracle
+        continue-on-error: true
