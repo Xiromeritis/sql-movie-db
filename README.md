@@ -72,20 +72,31 @@ To run these scripts, you will need the following installed on your machine:
 
 ## How to Run (As-Is)
 
-To test and execute this database locally, you need an SQL environment (e.g., Oracle Database, given the use of Oracle's `ALTER SESSION SET NLS_DATE_FORMAT`).
+Clone the repository:
+```bash
+git clone https://github.com/Xiromeritis/sql-movie-db.git
+```
 
-**Execution Tip for VS Code / SQL IDEs:** Because the scripts contain multiple Data Definition (DDL) commands, avoid using the standard "Run All" button, as some IDEs struggle to parse multiple `CREATE TABLE` statements at once. Instead, either:
-* Select and execute the commands **one by one** (statement by statement).
-* Use the **"Run as Script"** / **"Execute All"** feature of your specific SQL extension.
+Open your SQL Client and connect to your local or remote database environment.
 
-1. **Create the Schema:**
-   Run `create.sql` to generate the tables. *(See execution tip above)*
-2. **Populate the Database:**
-   Run `insert.sql` to insert the sample movies, actors, roles, and companies.
-3. **Execute Queries:**
-   Run `select.sql` to extract statistics and answer the predefined analytical questions.
-4. **Clean up (Optional):**
-   Run `drop.sql` to cleanly remove all tables from your environment.
+   **Execution Tip for VS Code / SQL IDEs**: Because the scripts contain multiple Data Definition (DDL) commands,
+   avoid using the standard "**Run All**" button, as some IDEs struggle to parse multiple `CREATE TABLE` statements simultaneously. Instead, either:
+
+   - Select and execute the commands one by one (statement by statement).
+
+   - Use the "**Run as Script**" / "**Execute All**" feature of your specific SQL extension.
+
+- Create the Schema:
+  Run create.sql to generate the tables. (See execution tip above)
+
+- Populate the Database:
+  Run insert.sql to insert the sample movies, actors, roles, and companies.
+
+- Execute Queries:
+  Run select.sql to extract statistics and answer the predefined analytical questions.
+
+- Clean up (*Optional*):
+  Run drop.sql to cleanly remove all tables from your environment.
 
 ---
 
@@ -99,3 +110,12 @@ all of which are answered in the [report](REPORT-EN.md).
 ## License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+> **Final Grades:**
+>
+
+> **1<sup>st</sup> Assignment: <sup>100</sup> / <sub>100</sub>**
+> 
+> **2<sup>nd</sup> Assignment: <sup>92</sup> / <sub>10</sub>**
