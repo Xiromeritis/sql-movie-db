@@ -10,8 +10,6 @@
 
 *Harokopio University of Athens*
 
----
-
 A complete Relational Database Management project for Movie Data.
 
 ---
