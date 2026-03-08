@@ -1,6 +1,6 @@
 # SQL Movie Database
 
-[![SQL Lint Status](https://github.com/Xiromeritis/sql-movie-db/actions/workflows/sql-lint.yml/badge.svg)](https://github.com/Xiromeritis/sql-movie-db/actions)
+[![SQL Lint Status](https://github.com/Xiromeritis/sql-movie-db/actions/workflows/sql-lint.yml/badge.svg?branch=main)](https://github.com/Xiromeritis/sql-movie-db/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/YOUR_USERNAME/sql-movie-db/blob/main/LICENSE)
 ![Oracle SQL](https://img.shields.io/badge/Database-Oracle%20SQL-F80000?logo=oracle&logoColor=white)
 
