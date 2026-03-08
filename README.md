@@ -22,6 +22,8 @@ A complete Relational Database Management project for Movie Data.
 
 The database stores information about **movies** (budget, revenue, ratings, duration, genres, keywords), **contributors** (actors, directors, writers), **production companies**, and the complex relationships between them.
 
+---
+
 ## Features
 * **Conceptual Design:** Detailed Entity-Relationship (E-R) diagram.
 * **Logical Design:** Translation of the E-R diagram into a Relational Model.
