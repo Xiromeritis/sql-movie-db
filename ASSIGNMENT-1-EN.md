@@ -77,7 +77,7 @@ in the theory:
 
 a) provide the final relational schema that results and
 
-b) describe the actions you will take to map the O-S diagram to
+b) describe the actions you will take to map the E-R diagram to
 relational.
 
 ---
