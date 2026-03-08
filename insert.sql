@@ -1,4 +1,4 @@
--- Set date format for the session
+-- Set the date format for the session
 ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD';
 
 -- Inserting production companies 

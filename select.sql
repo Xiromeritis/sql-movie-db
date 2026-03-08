@@ -1,10 +1,10 @@
--- 1) Ποιοι είναι οι τίτλοι και οι διάρκειες όλων των ταινιών δράσης που έχουν διάρκεια μεγαλύτερη από 120 λεπτά; 
+-- 1) What are the titles and durations of all action films that are longer than 120 minutes?
 SELECT m.Movie_Title AS "Action Movies", TO_CHAR(m.Movie_Duration) || ' minutes' AS "Duration"
 FROM Movie m
 JOIN Genres g ON m.Movie_ID = g.Movie_ID 
 WHERE g.Genre = 'Action' AND m.Movie_Duration > 120;
 
---2) Ποιες είναι οι 3 ταινίες με τον μεγαλύτερο αριθμό συντελεστών (ηθοποιούς και σκηνοθέτες);
+--2) Which are the 3 films with the largest number of contributors (actors and directors)?
 SELECT m.Movie_Title AS "Movie", COUNT(DISTINCT s.Staff_Member_ID) AS "Total Staff Members"
 FROM Movie m
 LEFT JOIN Role r ON m.Movie_ID = r.Movie_ID
@@ -16,24 +16,24 @@ GROUP BY m.Movie_ID, m.Movie_Title
 ORDER BY COUNT(DISTINCT s.Staff_Member_ID) DESC
 FETCH FIRST 3 ROWS ONLY;
 
--- 3) Ποιοι ηθοποιοί έχουν συμμετάσχει στην ταινία με τίτλο της επιλογής σας;
+-- 3) Which actors have appeared in the film of your choice?
 SELECT DISTINCT s.Staff_Member_First_Name || ' ' || s.Staff_Member_Last_Name AS "'Se7en' Actor", s.Staff_Member_ID AS "ID"
 FROM Staff_Member s JOIN Role r ON s.Staff_Member_ID = r.Staff_Member_ID
 WHERE r.Movie_ID = (SELECT Movie_ID FROM Movie where Movie_Title = 'Se7en');
 
--- 4) Ποιες ταινίες σκηνοθέτησε ο σκηνοθέτης που θα επιλέξετε και ποια ήταν η μέση βαθμολογία τους;
+-- 4) Which films were directed by the director you choose and what was their average rating?
 SELECT m.Movie_Title AS "Martin Scorsese Movie", m.Vote_Average AS "Average Vote"
 FROM Movie m JOIN Directs d ON m.Movie_ID = d.Movie_ID
 WHERE d.Staff_Member_ID = 16;       -- Director: Martin Scorsese
 
--- 5) Ποιες είναι οι 2 ταινίες (τίτλοι) με τα περισσότερα έσοδα που έχει παράγει η εταιρεία παραγωγής "Warner Bros";
+-- 5) Which are the 2 films (titles) with the highest revenue produced by the production company "Warner Bros"?
 SELECT Movie_Title AS "Movie", '$' || TO_CHAR(m.Revenue) AS "Revenue"
 FROM Movie m
 WHERE Movie_ID IN (SELECT Movie_ID FROM Produces WHERE Company_Name = 'Warner Bros. Pictures')
 ORDER BY Revenue DESC
 FETCH FIRST 2 ROWS ONLY;
 
--- 6) Ποιοι ηθοποιοί έχουν παίξει σε περισσότερες από 5 διαφορετικές ταινίες;
+-- 6) Which actors have appeared in more than 5 different films?
 SELECT s.Staff_Member_First_Name ||' '|| s.Staff_Member_Last_Name AS "Actor", s.Staff_Member_ID AS "ID", r_more_than5.Total_Movies AS "Total Movies"
 FROM Staff_Member s 
 JOIN (
@@ -44,7 +44,7 @@ JOIN (
 ) r_more_than5
 ON s.Staff_Member_ID = r_more_than5.Staff_Member_ID;
 
---7) Ποιες εταιρείες παραγωγής έχουν συνολικά έσοδα άνω των 500 εκατομμυρίων δολαρίων από τις ταινίες που έχουν παράγει;
+--7) Which production companies have total revenues of over $500 million from the films they have produced?
 SELECT p.Company_Name AS "Company", '$' || TO_CHAR(SUM(m.Revenue)) AS "Total Revenue"
 FROM Produces p
 JOIN Movie m ON p.Movie_ID = m.Movie_ID
@@ -52,7 +52,7 @@ GROUP BY p.Company_Name, p.Country
 HAVING SUM(m.Revenue) > 500000000
 ORDER BY SUM(m.Revenue) DESC;
 
---8) Ποιοι είναι οι σκηνοθέτες που έχουν σκηνοθετήσει τουλάχιστον 2 ταινίες που είναι sequels και έχουν βαθμολογία πάνω από 7;
+--8) Which directors have directed at least 2 movies that are sequels and have a rating above 7?
 SELECT s.Staff_Member_First_Name ||' '|| s.Staff_Member_Last_Name AS "Director", d.Staff_Member_ID AS "ID", COUNT(m.Movie_ID) AS "Total Sequels"
 FROM Directs d
 JOIN Movie m ON d.Movie_ID = m.Movie_ID
@@ -62,7 +62,7 @@ GROUP BY s.Staff_Member_First_Name, s.Staff_Member_Last_Name, d.Staff_Member_ID
 HAVING COUNT(m.Movie_ID) >= 2
 ORDER BY COUNT(m.Movie_ID) DESC;
 
--- 9) Ποιος σκηνοθέτης έχει παίξει σε όλες τις ταινίες που έχει σκηνοθετήσει;
+-- 9) Which director has acted in all the movies he has directed?
 SELECT s.Staff_Member_First_Name ||' '|| s.Staff_Member_Last_Name AS "Director", s.Staff_Member_ID AS "ID"
 FROM Staff_Member s
 WHERE s.Staff_Member_ID IN (
