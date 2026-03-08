@@ -54,3 +54,93 @@ Explanation of the relational model:
 ---
 
 > *The diagrams were created using [Visual Paradigm Online](https://online.visual-paradigm.com/).*
+
+---
+
+<div align="center">
+    <h1>
+        Results of executing the select queries
+    </h1>
+</div>
+
+---
+
+1) What are the titles and durations of all action films that are
+   longer than 120 minutes?
+
+<div align="center">
+    <img src="screenshots/1.png" alt="What are the titles and durations of all action films that are longer than 120 minutes?">
+</div>
+
+---
+
+2) Which are the 3 films with the largest number of contributors (actors and
+   directors)?
+
+<div align="center">
+    <img src="screenshots/2.png" alt="Which are the 3 films with the largest number of contributors (actors and directors)?">
+</div>
+
+---
+
+3) Which actors have appeared in the film of your choice?
+
+<div align="center">
+    <img src="screenshots/3.png" alt="Which actors have appeared in the film of your choice?">
+</div>
+
+---
+
+4) Which films were directed by the director you choose and what was their average
+   rating?
+
+<div align="center">
+    <img src="screenshots/4.png" alt="Which films were directed by the director you choose and what was their average rating?">
+</div>
+
+---
+
+5) Which are the 2 films (titles) with the highest revenue produced by the
+   production company "Warner Bros"?
+
+<div align="center">
+    <img src="screenshots/5.png" alt="Which are the 2 films (titles) with the highest revenue produced by the production company Warner Bros?">
+</div>
+
+---
+
+6) Which actors have appeared in more than 5 different films?
+
+<div align="center">
+    <img src="screenshots/6.png" alt="Which actors have appeared in more than 5 different films?">
+</div>
+
+---
+
+7) Which production companies have total revenues of over $500 million
+   from the films they have produced?
+
+<div align="center">
+    <img src="screenshots/7.png" alt="Which production companies have total revenues of over $500 million from the films they have produced?">
+</div>
+
+---
+
+8) Which directors have directed at least 2 movies that are sequels
+   and have a rating above 7?
+
+<div align="center">
+    <img src="screenshots/8.png" alt="Which directors have directed at least 2 movies that are sequels and have a rating above 7?">
+</div>
+
+---
+
+9) Which director has acted in all the movies he has directed?
+
+<div align="center">
+    <img src="screenshots/9.png" alt="Which director has acted in all the movies he has directed?">
+</div>
+
+---
+
+> *All data was retrieved from [IMDb](https://www.imdb.com/).*
