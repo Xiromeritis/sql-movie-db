@@ -1,6 +1,6 @@
 <div align="center">
     <h1>
-        Actions for displaying an E-R diagram in relational model
+        Actions for displaying the E-R diagram in relational model
     </h1>
 </div>
 
