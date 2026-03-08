@@ -22,7 +22,7 @@ A complete Relational Database Management project for Movie Data.
 
 The database stores information about **movies** (budget, revenue, ratings, duration, genres, keywords), **contributors** (actors, directors, writers), **production companies**, and the complex relationships between them.
 
-### Features
+## Features
 * **Conceptual Design:** Detailed Entity-Relationship (E-R) diagram.
 * **Logical Design:** Translation of the E-R diagram into a Relational Model.
 * **Database Implementation:** SQL scripts defining tables and primary/foreign keys.
@@ -31,7 +31,7 @@ The database stores information about **movies** (budget, revenue, ratings, dura
 
 ---
 
-## Repository Structure
+## Project Structure
 
 ```text
 sql-movie-db/
@@ -70,7 +70,7 @@ To run these scripts, you will need the following installed on your machine:
 
 ---
 
-## How to Run (As-Is)
+## How to Run
 
 Clone the repository:
 ```bash
